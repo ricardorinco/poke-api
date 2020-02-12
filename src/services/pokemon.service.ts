@@ -31,6 +31,20 @@ export class PokeService {
         });
     }
 
+    public updatePokemon(req: Request, res: Response) {
+        const pokemonId = req.params.id;
+        Pokemon.findByIdAndUpdate(
+            pokemonId, req.body, (error: Error, pokemon: any) => {
+                if (error) {
+                res.send(error);
+            }
+
+                const message = pokemon ? 'Updated successfully' : 'Pokemon not found :(';
+                res.send(message);
+            }
+        );
+    }
+
     public deletePokemon(req: Request, res: Response) {
         const pokemonId = req.params.id;
         Pokemon.findByIdAndDelete(pokemonId, (error: Error, deleted: any) => {

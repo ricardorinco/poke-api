@@ -100,6 +100,95 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Update Pokemon",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Ivysaur",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Grass, Poison",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "87.5% ♂ 12.5% ♀",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "1.0",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "13.0",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"value": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/pokemon/5e448af12bea2c3bd89e974c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pokemon",
+						"5e448af12bea2c3bd89e974c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pokemon",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/pokemon/5e4487f862bb0f0dbc6cb686",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pokemon",
+						"5e4487f862bb0f0dbc6cb686"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
