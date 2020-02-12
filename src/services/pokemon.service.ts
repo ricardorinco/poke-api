@@ -31,4 +31,16 @@ export class PokeService {
         });
     }
 
+    public deletePokemon(req: Request, res: Response) {
+        const pokemonId = req.params.id;
+        Pokemon.findByIdAndDelete(pokemonId, (error: Error, deleted: any) => {
+            if (error) {
+                res.send(error);
+            }
+          
+            const message = deleted ? 'Deleted successfully' : 'Pokemon not found :(';
+            res.send(message);
+        });
+    }
+
 }
