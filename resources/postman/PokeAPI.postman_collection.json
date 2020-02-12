@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "69b7c445-4796-46f0-99ca-76f29e0935e4",
+		"name": "PokeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Welcome to PokeAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pokemon's",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/pokemons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pokemons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Pokemon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Bulbasaur",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Grass, Poison",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "87.5% ♂ 12.5% ♀",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "0.7",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "6.9",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"value": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

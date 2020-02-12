@@ -12,5 +12,7 @@ export class Controller {
 
     public routes() {
         this.app.route('/').get(this.pokeService.welcomeMessage);
+        this.app.route('/pokemons').get(this.pokeService.getAllPokemon);
+        this.app.route('/pokemon').post(this.pokeService.addNewPokemon);
     }
 }
